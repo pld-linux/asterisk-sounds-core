@@ -1,9 +1,9 @@
 # TODO:
-# - find solution for https://bugs.launchpad.net/pld-linux/+bug/501593
+# - find (permanent) solution for https://bugs.launchpad.net/pld-linux/+bug/501593
 Summary:	Core sounds for Asterisk
 Name:		asterisk-sounds-core
 Version:	1.4.17
-Release:	0.1
+Release:	1
 License:	CC-BY-SA
 Group:		Applications/Sound
 URL:		http://www.asterisk.org/
@@ -366,6 +366,14 @@ Core French WAV sound files for Asterisk.
 %prep
 %setup -q -c -T
 
+if [ -f /proc/$PPID/environ ]; then
+	# import env from parent process
+	export $(tr '\0' '\n' < /proc/$PPID/environ | grep -E '^(LC_|LANG)')
+	if locale | grep -qi utf8; then
+		echo >&2 "You should re-run rpmbuild with LANG=C LC_ALL=C, see https://bugs.launchpad.net/pld-linux/+bug/501593"
+		exit 1
+	fi
+fi
 
 for file in %{S:0} %{S:1} %{S:2} %{S:3} %{S:4} %{S:5} %{S:6} %{S:7} %{S:8}; do
 	tar --list --file $file | grep -E '.(alaw|g722|g729|gsm|siren7|siren14|sln16|ulaw|wav)$' | sed -e 's!^!%{sounds_dir}/!' > `basename $file .tar.gz`.list
@@ -387,31 +395,6 @@ done
 iconv -f iso-8859-1 -t utf-8 < fr/core-sounds-fr.txt > fr/core-sounds-fr.txt.tmp
 touch --reference fr/core-sounds-fr.txt fr/core-sounds-fr.txt.tmp
 mv fr/core-sounds-fr.txt.tmp fr/core-sounds-fr.txt
-
-# bad magic crap:
-#error: magic_file(ms, ".../usr/share/asterisk/sounds/vm-forwardoptions.sln16") failed: mode 37777700644 DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#rpmbuild: rpmfc.c:1366: rpmfcClassify: Assertion `ftype != ((void *)0)' failed.
-#error: magic_file(ms, "... /usr/share/asterisk/sounds/es/vm-Olds.siren14") failed: mode 37777700644 Macintosh HFS Extended version 58223 data (spared blocks) (unclean) (locked) vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./digits/h-1.sln16:                         ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./es/letters/space.sln16:                   ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./es/vm-Olds.siren14:                       ERROR: Macintosh HFS Extended version 58223 data (spared blocks) (unclean) (locked) vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/digits/hundred.sln16:                     ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/followme/options.sln16:                   ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/followme/pls-hold-while-try.sln16:        ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/letters/ascii123.sln16:                   ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/dir-nomatch.sln16:                        ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./fr/priv-introsaved.sln16:                    ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./vm-forwardoptions.sln16:                     ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-#./vm-onefor.sln16:                             ERROR: DOS executable (device driver)vasprintf failed (Invalid or incomplete multibyte or wide character)
-
-# see https://bugs.launchpad.net/pld-linux/+bug/501593
-export LC_ALL=en_US.utf8
-find -type f | xargs file > magic.txt || :
-for file in $(awk -F: '/ERROR/{print $1}' magic.txt | sed -e 's,^\.,%{sounds_dir},'); do
-	sed -i -e "s,$file,," *.list
-#	echo >&2 "You should re-run rpmbuild with LC_ALL=C, see https://bugs.launchpad.net/pld-linux/+bug/501593"
-#	exit 1
-done
 
 %install
 rm -rf $RPM_BUILD_ROOT
