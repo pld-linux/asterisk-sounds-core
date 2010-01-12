@@ -368,8 +368,9 @@ Core French WAV sound files for Asterisk.
 
 if [ -f /proc/$PPID/environ ]; then
 	# import env from parent process
+	unset LC_ALL
 	export $(tr '\0' '\n' < /proc/$PPID/environ | grep -E '^(LC_|LANG)')
-	if locale | grep -qi utf8; then
+	if locale | grep -Eqi 'utf-?8'; then
 		echo >&2 "You should re-run rpmbuild with LANG=C LC_ALL=C, see https://bugs.launchpad.net/pld-linux/+bug/501593"
 		exit 1
 	fi
