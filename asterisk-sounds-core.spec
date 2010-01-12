@@ -3,7 +3,7 @@
 Summary:	Core sounds for Asterisk
 Name:		asterisk-sounds-core
 Version:	1.4.17
-Release:	1
+Release:	2
 License:	CC-BY-SA
 Group:		Applications/Sound
 URL:		http://www.asterisk.org/
@@ -364,7 +364,7 @@ Provides:	asterisk-sounds-core = %{version}-%{release}
 Core French WAV sound files for Asterisk.
 
 %prep
-%setup -q -c -T
+%setup -qcT
 
 if [ -f /proc/$PPID/environ ]; then
 	# import env from parent process
@@ -415,11 +415,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES-asterisk-core-en-%{version}
 %doc CREDITS-asterisk-core-en-%{version}
 %doc LICENSE-asterisk-core-en-%{version}
-%dir %{sounds_dir}/dictate/
-%dir %{sounds_dir}/digits/
-%dir %{sounds_dir}/followme/
-%dir %{sounds_dir}/letters/
-%dir %{sounds_dir}/phonetic/
+%dir %{sounds_dir}/dictate
+%dir %{sounds_dir}/digits
+%dir %{sounds_dir}/followme
+%dir %{sounds_dir}/letters
+%dir %{sounds_dir}/phonetic
+%dir %{sounds_dir}/silence
 
 %files en-alaw -f asterisk-core-sounds-en-alaw-%{version}.list
 %defattr(644,root,root,755)
@@ -463,12 +464,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc es/CHANGES-asterisk-core-es-%{version}
 %doc es/CREDITS-asterisk-core-es-%{version}
 %doc es/LICENSE-asterisk-core-es-%{version}
-%dir %{sounds_dir}/es/
-%dir %{sounds_dir}/es/dictate/
-%dir %{sounds_dir}/es/digits/
-%dir %{sounds_dir}/es/followme/
-%dir %{sounds_dir}/es/letters/
-%dir %{sounds_dir}/es/phonetic/
+%dir %{sounds_dir}/es
+%dir %{sounds_dir}/es/dictate
+%dir %{sounds_dir}/es/digits
+%dir %{sounds_dir}/es/followme
+%dir %{sounds_dir}/es/letters
+%dir %{sounds_dir}/es/phonetic
+%dir %{sounds_dir}/es/silence
 
 %files es-alaw -f asterisk-core-sounds-es-alaw-%{version}.list
 %defattr(644,root,root,755)
@@ -512,12 +514,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc fr/CHANGES-asterisk-core-fr-%{version}
 %doc fr/CREDITS-asterisk-core-fr-%{version}
 %doc fr/LICENSE-asterisk-core-fr-%{version}
-%dir %{sounds_dir}/fr/
-%dir %{sounds_dir}/fr/dictate/
-%dir %{sounds_dir}/fr/digits/
-%dir %{sounds_dir}/fr/followme/
-%dir %{sounds_dir}/fr/letters/
-%dir %{sounds_dir}/fr/phonetic/
+%dir %{sounds_dir}/fr
+%dir %{sounds_dir}/fr/dictate
+%dir %{sounds_dir}/fr/digits
+%dir %{sounds_dir}/fr/followme
+%dir %{sounds_dir}/fr/letters
+%dir %{sounds_dir}/fr/phonetic
+%dir %{sounds_dir}/fr/silence
 
 %files fr-alaw -f asterisk-core-sounds-fr-alaw-%{version}.list
 %defattr(644,root,root,755)
