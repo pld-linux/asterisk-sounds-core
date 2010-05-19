@@ -61,6 +61,7 @@ Source27:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-c
 # Source27-md5:	0bb95f9a4d603a2c6cd99b524ac78882
 Source28:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-wav-%{version}.tar.gz
 # Source28-md5:	97ebd3136b3771922104fe25c9ebec28
+BuildRequires:	iconv
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
