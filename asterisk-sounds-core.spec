@@ -2,65 +2,65 @@
 # - find (permanent) solution for https://bugs.launchpad.net/pld-linux/+bug/501593
 Summary:	Core sounds for Asterisk
 Name:		asterisk-sounds-core
-Version:	1.4.20
+Version:	1.4.21
 Release:	1
 License:	CC-BY-SA
 Group:		Applications/Sound
 URL:		http://www.asterisk.org/
 Source0:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-alaw-%{version}.tar.gz
-# Source0-md5:	971fd6a051a7e602c678674d5197340d
+# Source0-md5:	2f8f123059d0473448369c45bf302d4c
 Source1:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-g722-%{version}.tar.gz
-# Source1-md5:	862819cc65a33e34ef6d5a473c32f172
+# Source1-md5:	d2f75130060b980b50cabc918e7a1feb
 Source2:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-g729-%{version}.tar.gz
-# Source2-md5:	b0ec575ae180bc9030685253113eabe4
+# Source2-md5:	4b25c312dbcf4b78b1395be2af31364f
 Source3:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-gsm-%{version}.tar.gz
-# Source3-md5:	5f2180c6166578d302263eb6f1defb96
+# Source3-md5:	f3236af6dce4978abbd721bc4a5229c5
 Source4:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-siren7-%{version}.tar.gz
-# Source4-md5:	2df84acf5edabbcbcf8e9a5b7fcd0b62
+# Source4-md5:	796ec9fdff9522e7f12841fd862b134b
 Source5:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-siren14-%{version}.tar.gz
-# Source5-md5:	2410af6dca67336af2e58fb9b192586c
+# Source5-md5:	e070a4e6746a2baf27f4e349868807ed
 Source6:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-sln16-%{version}.tar.gz
-# Source6-md5:	1400a3b5fbaac50b4dee3f30f1bb7094
+# Source6-md5:	bb061ce31c0228684e3ee772153e0120
 Source7:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-ulaw-%{version}.tar.gz
-# Source7-md5:	f23a8d615c783a87f72f6aa13403e4fd
+# Source7-md5:	5dbbaadcc41e4b14325649caf8e7fb85
 Source8:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-en-wav-%{version}.tar.gz
-# Source8-md5:	8666b26ee4ed215b3de9eb101a686908
+# Source8-md5:	c1d5a75be4683dc21c005414df591728
 Source10:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-alaw-%{version}.tar.gz
-# Source10-md5:	6438848c56c8b6ed9d48ab2d11d859e6
+# Source10-md5:	6f8964bbfd66841d9a9ead3cc68ef5c5
 Source11:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-g722-%{version}.tar.gz
-# Source11-md5:	33a4c5f3bc83e5ad6c0d8f95d1dc029e
+# Source11-md5:	97cce709abc5f488aa9ea095dac9c739
 Source12:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-g729-%{version}.tar.gz
-# Source12-md5:	426581a21c0a67eedfb3dc50b5650b1c
+# Source12-md5:	e3fa07be09d759c15acb0f04d1d619f3
 Source13:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-gsm-%{version}.tar.gz
-# Source13-md5:	beb061f7098cff3ecf907744f2def2ee
+# Source13-md5:	e2ed66bf001b211c63dfb1cd2f0a9240
 Source14:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-siren7-%{version}.tar.gz
-# Source14-md5:	22ecfaffdfdf652c0bf12faa02ae9b56
+# Source14-md5:	9067930e5e48852e67563e102677d362
 Source15:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-siren14-%{version}.tar.gz
-# Source15-md5:	776abded14e84aef5ce396aaa3b28e7b
+# Source15-md5:	bbabf68c04194a5c33cdd524b2c5d589
 Source16:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-sln16-%{version}.tar.gz
-# Source16-md5:	18eaafe830c763eb5cfe204e7506708c
+# Source16-md5:	0150fc9250da66704405b17763363b45
 Source17:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-ulaw-%{version}.tar.gz
-# Source17-md5:	967df5bc9ceda346aefe8b15aade31ab
+# Source17-md5:	55a27faca07ab73f7cf67cd497fbbfc7
 Source18:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-es-wav-%{version}.tar.gz
-# Source18-md5:	368821ed1d0eae27bd7b28d22521cee2
+# Source18-md5:	d4cd582e4fcdb8e546572eb3e4206f48
 Source20:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-alaw-%{version}.tar.gz
-# Source20-md5:	9de891d55e80ec2b72c522d0073e2dc3
+# Source20-md5:	3a01c76d575798baa27b89028af1dce2
 Source21:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-g722-%{version}.tar.gz
-# Source21-md5:	ed4e0d18fe700ade459f0c448ecca174
+# Source21-md5:	798937d9b51b4dbba2963ef19b1bf811
 Source22:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-g729-%{version}.tar.gz
-# Source22-md5:	c0a7672d25f613959b9b6a561b9cd73c
+# Source22-md5:	0c7327eae462e8c755e97179b20006b5
 Source23:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-gsm-%{version}.tar.gz
-# Source23-md5:	74aaa9a1971e7b8df842945be2b4b9b2
+# Source23-md5:	0e19c7f9fcea328ca916bd8c27805278
 Source24:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-siren7-%{version}.tar.gz
-# Source24-md5:	237db6104501b0eae17202642fde7c02
+# Source24-md5:	a7a82ce36ae708ceedd2fb5a50f2810e
 Source25:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-siren14-%{version}.tar.gz
-# Source25-md5:	8c5de1aa03e8590d106059c6a58d2528
+# Source25-md5:	9feb704b839128b4df39ff29c24a5184
 Source26:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-sln16-%{version}.tar.gz
-# Source26-md5:	e9c33aa012fd496631145205b2d9bdea
+# Source26-md5:	912db1cc19375612d10beb9157ceac7e
 Source27:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-ulaw-%{version}.tar.gz
-# Source27-md5:	e72f3105464f772b2aa55be48df92fee
+# Source27-md5:	cc09428e6f14bbad005bfe55c11f21e1
 Source28:	http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-core-sounds-fr-wav-%{version}.tar.gz
-# Source28-md5:	43dc2915cb047b068ca927311ac837ca
+# Source28-md5:	90d79afe5db833db6820f0b464f182a8
 BuildRequires:	iconv
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
