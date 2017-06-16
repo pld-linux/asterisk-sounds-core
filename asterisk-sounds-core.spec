@@ -3,12 +3,12 @@
 
 %define	_version	1.5
 # Spanish sounds lag behind
-%define	es_version	1.4.27
+%define	es_version	1.5
 
 Summary:	Core sounds for Asterisk
 Name:		asterisk-sounds-core
 Version:	%{_version}
-Release:	1
+Release:	2
 License:	CC-BY-SA
 Group:		Applications/Sound
 URL:		http://www.asterisk.org/
@@ -478,9 +478,9 @@ rm -rf $RPM_BUILD_ROOT
 %files es
 %defattr(644,root,root,755)
 %doc es/core-sounds-es.txt
-%doc es/CHANGES-asterisk-core-es-%{es_version}
-%doc es/CREDITS-asterisk-core-es-%{es_version}
-%doc es/LICENSE-asterisk-core-es-%{es_version}
+%doc es/CHANGES-asterisk-core-es-*
+%doc es/CREDITS-asterisk-core-es-*
+%doc es/LICENSE-asterisk-core-es-*
 %dir %{sounds_dir}/es
 %dir %{sounds_dir}/es/dictate
 %dir %{sounds_dir}/es/digits
