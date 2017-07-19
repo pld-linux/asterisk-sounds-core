@@ -1,6 +1,9 @@
 # TODO:
 # - find (permanent) solution for https://bugs.launchpad.net/pld-linux/+bug/501593
 
+%define		no_install_post_strip	1
+%define		_enable_debug_packages	0
+
 %define	_version	1.5
 # Spanish sounds lag behind
 %define	es_version	1.5
